@@ -15,7 +15,7 @@
 
         h1 {
             text-align: center;
-            color: #4CAF50; /* Grüne Akzentfarbe */
+            color: #FF0000; /* AKZENTFARBE AUF ROT GEÄNDERT */
         }
 
         form {
@@ -47,7 +47,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #FF0000; /* AKZENTFARBE AUF ROT GEÄNDERT */
             color: white;
             padding: 10px 15px;
             border: none;
@@ -59,7 +59,7 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #cc0000; /* Dunkleres Rot beim Hovern */
         }
     </style>
 </head>
@@ -85,6 +85,27 @@
         
         <button type="submit">Absenden</button>
     </form>
+
+    <script>
+        function getTodayDate() {
+            const now = new Date();
+            const year = now.getFullYear();
+            let month = now.getMonth() + 1;
+            let day = now.getDate();
+
+            // Fügt eine führende Null hinzu, falls nötig
+            if (month < 10) {
+                month = '0' + month;
+            }
+            if (day < 10) {
+                day = '0' + day;
+            }
+            
+            return `${year}-${month}-${day}`;
+        }
+
+        document.getElementById('datum').min = getTodayDate();
+    </script>
 
 </body>
 </html>
