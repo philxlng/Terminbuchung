@@ -15,7 +15,7 @@
 
         h1 {
             text-align: center;
-            color: #FF0000; /* Rote Akzentfarbe */
+            color: #800080; /* AKZENTFARBE AUF LILA GEÄNDERT */
         }
 
         form {
@@ -47,7 +47,7 @@
         }
 
         button {
-            background-color: #FF0000; /* Rote Akzentfarbe */
+            background-color: #800080; /* AKZENTFARBE AUF LILA GEÄNDERT */
             color: white;
             padding: 10px 15px;
             border: none;
@@ -59,7 +59,7 @@
         }
 
         button:hover {
-            background-color: #cc0000; /* Dunkleres Rot beim Hovern */
+            background-color: #6a006a; /* Dunkleres Lila beim Hovern */
         }
     </style>
 </head>
@@ -67,9 +67,13 @@
 
     <h1>Terminbuchung</h1>
 
-    <form action="https://formspree.io/f/xanprbqb" method="POST">
+    <form action="https://formsubmit.co/phillange@me.com" method="POST">
         
         <input type="hidden" name="_next" value="https://philxlng.github.io/Bestaetigung/" />
+
+        <input type="hidden" name="_captcha" value="false">
+        
+        <input type="hidden" name="_subject" value="Neue Terminbuchung für Johannes und Phil!">
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="Name" required>
@@ -103,7 +107,6 @@
             return `${year}-${month}-${day}`;
         }
 
-        // Setzt das heutige Datum als minimal wählbares Datum
         document.getElementById('datum').min = getTodayDate();
     </script>
 
