@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminbestätigung</title>
     <style>
+        /* CSS für den schwarzen Hintergrund und die zentrierte Nachricht */
         body {
             background-color: black;
             color: white;
@@ -12,24 +13,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Volle Höhe des Viewports */
+            height: 100vh; 
             margin: 0;
             text-align: center;
         }
 
         .confirmation-message {
-            font-size: 3em; /* Große Schrift */
-            color: #FFD700; /* Goldene Farbe für die Bestätigung */
-            padding: 20px;
-            border: 2px solid #FFD700;
-            border-radius: 10px;
-            animation: fadeIn 2s;
+            font-size: 2.5em; /* Große Schrift */
+            color: #FF69B4; /* Rosa für Liebe */
+            padding: 30px;
+            border: 4px solid #FF69B4;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); /* Leichter Schimmer */
+            max-width: 80%;
+            line-height: 1.4;
         }
 
-        /* Fügt eine einfache Animation hinzu, ist aber reines CSS (kein JavaScript) */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        strong {
+            font-weight: 900;
+        }
+
+        /* Responsive Anpassungen */
+        @media (max-width: 600px) {
+            .confirmation-message {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
