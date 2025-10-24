@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminbestätigung</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Volle Höhe des Viewports */
+            margin: 0;
+            text-align: center;
+        }
+
+        .confirmation-message {
+            font-size: 3em; /* Große Schrift */
+            color: #FFD700; /* Goldene Farbe für die Bestätigung */
+            padding: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            animation: fadeIn 2s;
+        }
+
+        /* Fügt eine einfache Animation hinzu, ist aber reines CSS (kein JavaScript) */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confirmation-message">
+        Herzlichen Glückwunsch **Johannes**, du hast dein Date mit **Phil** gebucht! ❤️
+    </div>
+
+</body>
+</html>
