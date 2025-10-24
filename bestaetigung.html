@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,7 +9,7 @@
         /* CSS für den schwarzen Hintergrund und die zentrierte Nachricht */
         body {
             background-color: black;
-            color: white;
+            color: white; /* Textfarbe auf Weiß gesetzt */
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -19,24 +20,39 @@
         }
 
         .confirmation-message {
-            font-size: 2.5em; /* Große Schrift */
-            color: #FF69B4; /* Rosa für Liebe */
-            padding: 30px;
-            border: 4px solid #FF69B4;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); /* Leichter Schimmer */
-            max-width: 80%;
-            line-height: 1.4;
+            font-size: 3.5em; /* Noch größere Schrift */
+            color: white; /* Textfarbe auf Weiß gesetzt */
+            line-height: 1.2;
+            padding: 20px;
+            /* Umrandung und Schatten entfernt */
+            
+            /* CSS-Animation für das 3x Aufblinken */
+            animation: flash 1.5s ease-in-out 3; /* Blitzt 3x (1.5s Dauer) */
+            animation-fill-mode: forwards; /* Behält den Zustand nach der Animation bei */
         }
 
         strong {
             font-weight: 900;
+            color: #FF0000; /* Namen in Rot hervorheben */
+        }
+
+        /* Definition der Blink-Animation */
+        @keyframes flash {
+            0%, 100% { 
+                opacity: 1; 
+                color: white; /* Statische Farbe am Anfang und Ende */
+            }
+            15%, 45%, 75% { 
+                opacity: 0.1; 
+                color: #FF0000; /* Rotes Blinken */
+            }
         }
 
         /* Responsive Anpassungen */
         @media (max-width: 600px) {
             .confirmation-message {
-                font-size: 1.8em;
+                font-size: 2em;
+                max-width: 90%;
             }
         }
     </style>
@@ -44,7 +60,7 @@
 <body>
 
     <div class="confirmation-message">
-        Herzlichen Glückwunsch **Johannes**, du hast dein Date mit **Phil** gebucht! ❤️
+        Herzlichen Glückwunsch Johannes, du hast dein Date mit Phil gebucht! ❤️
     </div>
 
 </body>
